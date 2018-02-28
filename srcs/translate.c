@@ -6,7 +6,7 @@
 /*   By: fde-souz <fde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 14:03:15 by fde-souz          #+#    #+#             */
-/*   Updated: 2018/02/27 15:06:36 by fde-souz         ###   ########.fr       */
+/*   Updated: 2018/02/28 12:09:45 by fde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	nowall(double map[32][32])
 	int x;
 
 	x = 0;
-	while (x != 31)
+	while (x < 32)
 	{
 		if (map[0][x] != 1)
 			map_error(2);
@@ -26,7 +26,7 @@ static void	nowall(double map[32][32])
 		x++;
 	}
 	x = 0;
-	while (x != 31)
+	while (x < 32)
 	{
 		if (map[x][0] != 1)
 			map_error(2);
@@ -42,10 +42,10 @@ void		ennemies_place(double tab[32][32])
 	int y;
 
 	y = 0;
-	while (y != 32)
+	while (y < 32)
 	{
 		x = 0;
-		while (x != 32)
+		while (x < 32)
 		{
 			if (tab[y][x] == 7)
 			{
